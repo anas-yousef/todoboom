@@ -103,8 +103,8 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.ViewHolder> {
                     public void onClick(DialogInterface dialog, int which) {
                         todoItems.remove(todoItems.get(holder.getAdapterPosition()));
                         notifyDataSetChanged();
-                        MyTasks.sharedTodoList.saveTodoList(todoItems);
-                        todoItems = MyTasks.sharedTodoList.retrieveTodoList();
+                        //MyTasks.sharedTodoList.saveTodoList(todoItems);
+                        //todoItems = MyTasks.sharedTodoList.retrieveTodoList();
                     }
                 });
 

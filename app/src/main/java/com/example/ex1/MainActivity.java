@@ -35,19 +35,11 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
 
         if (savedInstanceState != null) {
-//            boolean[] clicked = savedInstanceState.getBooleanArray("clicked");
-//            ArrayList<String> tasks = savedInstanceState.getStringArrayList("todoList");
-//            assert tasks != null;
-//
-//            for (int i = 0; i < tasks.size(); i++) {
-//                assert clicked != null;
-//                todoList.add(new Todo(tasks.get(i), clicked[i]));
-//
-//            }
             todoList = savedInstanceState.getParcelableArrayList("todolist");
         }
         final TodoAdapter todoAdapter = new TodoAdapter(context, todoList);
         recyclerView.setAdapter(todoAdapter);
+
         //myTasks.sharedTodoList.saveTodoList(todoList);
         Log.i("Size of TODO List", String.valueOf(todoList.size()));
         //todoList = myTasks.sharedTodoList.retrieveTodoList();
@@ -65,13 +57,9 @@ public class MainActivity extends AppCompatActivity {
                     textEntered.setText("");
                     todoList.add(new Todo(message, false));
                     todoAdapter.notifyDataSetChanged();
-                    ArrayList<Todo> temp = todoList;
                     //myTasks.sharedTodoList.saveTodoList(todoList);
                     todoAdapter.notifyDataSetChanged();
                     //todoAdapter.notifyItemInserted(todoAdapter.getItemCount() - 1);
-                    //todoAdapter.setTodo(todoList);
-//                    recyclerView.setAdapter(todoAdapter);
-//                    recyclerView.setLayoutManager(new LinearLayoutManager(context));
                 }
             }
         });
