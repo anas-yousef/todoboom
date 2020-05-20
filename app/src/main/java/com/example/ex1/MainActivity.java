@@ -71,8 +71,8 @@ public class MainActivity extends AppCompatActivity {
                     todoAdapter.notifyDataSetChanged();
                     //todoAdapter.notifyItemInserted(todoAdapter.getItemCount() - 1);
                     //todoAdapter.setTodo(todoList);
-                    recyclerView.setAdapter(todoAdapter);
-                    recyclerView.setLayoutManager(new LinearLayoutManager(context));
+//                    recyclerView.setAdapter(todoAdapter);
+//                    recyclerView.setLayoutManager(new LinearLayoutManager(context));
                 }
             }
         });
