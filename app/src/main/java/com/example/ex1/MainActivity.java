@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(todoAdapter);
         //myTasks.sharedTodoList.saveTodoList(todoList);
         Log.i("Size of TODO List", String.valueOf(todoList.size()));
-        todoList = myTasks.sharedTodoList.retrieveTodoList();
+        //todoList = myTasks.sharedTodoList.retrieveTodoList();
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,11 +63,10 @@ public class MainActivity extends AppCompatActivity {
                 else{
 
                     textEntered.setText("");
-                    //todoAdapter.addTodoItem(new Todo(message, false));
                     todoList.add(new Todo(message, false));
                     todoAdapter.notifyDataSetChanged();
                     ArrayList<Todo> temp = todoList;
-                    myTasks.sharedTodoList.saveTodoList(todoList);
+                    //myTasks.sharedTodoList.saveTodoList(todoList);
                     todoAdapter.notifyDataSetChanged();
                     //todoAdapter.notifyItemInserted(todoAdapter.getItemCount() - 1);
                     //todoAdapter.setTodo(todoList);
