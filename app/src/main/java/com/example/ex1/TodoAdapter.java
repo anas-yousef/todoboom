@@ -44,13 +44,7 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.ViewHolder> {
     void removeTodoItem(Todo todo) {
         todoItems.remove(todo);
     }
-
-    public void setTodo(ArrayList<Todo> old) {
-        todoItems.clear();
-        todoItems.addAll(old);
-        notifyDataSetChanged();
-    }
-
+    
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
